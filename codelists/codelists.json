@@ -1,3 +1,118 @@
 {
-  "files": {}
+  "files": {
+    "opensafely-atrial-fibrillation-clinical-finding.csv": {
+      "id": "opensafely/atrial-fibrillation-clinical-finding/2020-07-09",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/atrial-fibrillation-clinical-finding/2020-07-09/",
+      "downloaded_at": "2022-01-26 14:39:33.881438Z",
+      "sha": "edccc1a96570988b7e92a7a6e44cdee70a0ac179"
+    },
+    "opensafely-chronic-cardiac-disease.csv": {
+      "id": "opensafely/chronic-cardiac-disease/2020-04-08",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/chronic-cardiac-disease/2020-04-08/",
+      "downloaded_at": "2022-01-26 14:39:34.615212Z",
+      "sha": "2267f6fada9c77a2bbf62ce7a1c07ddf48348d61"
+    },
+    "opensafely-other-heart-disease.csv": {
+      "id": "opensafely/other-heart-disease/2020-05-11",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/other-heart-disease/2020-05-11/",
+      "downloaded_at": "2022-01-26 14:39:34.965847Z",
+      "sha": "1649c5f85c6ad064d54132db15505cd0dcb31017"
+    },
+    "opensafely-heart-failure.csv": {
+      "id": "opensafely/heart-failure/2020-05-05",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/heart-failure/2020-05-05/",
+      "downloaded_at": "2022-01-26 14:39:35.165245Z",
+      "sha": "6139df4911534868bc5ade1ada53395606651064"
+    },
+    "opensafely-hypertension.csv": {
+      "id": "opensafely/hypertension/2020-04-28",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/hypertension/2020-04-28/",
+      "downloaded_at": "2022-01-26 14:39:35.336303Z",
+      "sha": "b0d7bbf6ea767366db458bc6f6d37955ae331cc7"
+    },
+    "opensafely-peripheral-arterial-disease.csv": {
+      "id": "opensafely/peripheral-arterial-disease/50e915d7",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/peripheral-arterial-disease/50e915d7/",
+      "downloaded_at": "2022-01-26 14:39:35.666361Z",
+      "sha": "c0477b035c7344af1285882903a28d40b7c8b6ef"
+    },
+    "opensafely-stroke-updated.csv": {
+      "id": "opensafely/stroke-updated/2020-06-02",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/stroke-updated/2020-06-02/",
+      "downloaded_at": "2022-01-26 14:39:35.839423Z",
+      "sha": "e62a8af49698022220de1e1e438d6b6c611e666e"
+    },
+    "opensafely-transient-ischaemic-attack.csv": {
+      "id": "opensafely/transient-ischaemic-attack/3526e2ac",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/transient-ischaemic-attack/3526e2ac/",
+      "downloaded_at": "2022-01-26 14:39:36.042323Z",
+      "sha": "f2c674bcb3dc20b7f32c3265d67ee5e53e3f871b"
+    },
+    "opensafely-diabetes.csv": {
+      "id": "opensafely/diabetes/2020-04-15",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/diabetes/2020-04-15/",
+      "downloaded_at": "2022-01-26 14:39:36.299611Z",
+      "sha": "f2781f0c9a0617b30996d681a798eedd152a09af"
+    },
+    "opensafely-asthma-diagnosis.csv": {
+      "id": "opensafely/asthma-diagnosis/2020-04-15",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/asthma-diagnosis/2020-04-15/",
+      "downloaded_at": "2022-01-26 14:39:36.488951Z",
+      "sha": "722a6ba77a1289a0941cfaa7ce0b9fa32c836f3c"
+    },
+    "opensafely-current-copd.csv": {
+      "id": "opensafely/current-copd/2020-05-06",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/current-copd/2020-05-06/",
+      "downloaded_at": "2022-01-26 14:39:36.669594Z",
+      "sha": "bab838b50e256ceef8b9d2f6ca1132491e522bda"
+    },
+    "opensafely-dementia-complete.csv": {
+      "id": "opensafely/dementia-complete/48c76cf8",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/dementia-complete/48c76cf8/",
+      "downloaded_at": "2022-01-26 14:39:36.852466Z",
+      "sha": "b73c9363f19a9ee9f4407e34e95e11d3eeb615f4"
+    },
+    "opensafely-depression.csv": {
+      "id": "opensafely/depression/2020-07-09",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/depression/2020-07-09/",
+      "downloaded_at": "2022-01-26 14:39:37.089601Z",
+      "sha": "654835e97c0cee53307db7ebd8becf48d0e3f31b"
+    },
+    "opensafely-psychosis-schizophrenia-bipolar-affective-disease.csv": {
+      "id": "opensafely/psychosis-schizophrenia-bipolar-affective-disease/2020-07-09",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/psychosis-schizophrenia-bipolar-affective-disease/2020-07-09/",
+      "downloaded_at": "2022-01-26 14:39:37.280611Z",
+      "sha": "c7c23c83a155cab15a41b21e10e26f33ca17bc3f"
+    },
+    "opensafely-cancer-excluding-lung-and-haematological.csv": {
+      "id": "opensafely/cancer-excluding-lung-and-haematological/2020-04-15",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/cancer-excluding-lung-and-haematological/2020-04-15/",
+      "downloaded_at": "2022-01-26 14:39:37.463569Z",
+      "sha": "8fa1164b587028c4bd5903289e0948642d399e56"
+    },
+    "opensafely-haematological-cancer.csv": {
+      "id": "opensafely/haematological-cancer/2020-04-15",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/haematological-cancer/2020-04-15/",
+      "downloaded_at": "2022-01-26 14:39:37.660337Z",
+      "sha": "59d65c613a7b984ba46eca8a74eedcc6320609fe"
+    },
+    "opensafely-lung-cancer.csv": {
+      "id": "opensafely/lung-cancer/2020-04-15",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/lung-cancer/2020-04-15/",
+      "downloaded_at": "2022-01-26 14:39:38.017992Z",
+      "sha": "645584a20f81c4d76187a2c305c904e8b8c63dbb"
+    },
+    "opensafely-learning-disabilities.csv": {
+      "id": "opensafely/learning-disabilities/2020-07-06",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/learning-disabilities/2020-07-06/",
+      "downloaded_at": "2022-01-26 14:39:38.227851Z",
+      "sha": "ab5b5f60e8525af5898ec1066fc820501b8e5e29"
+    },
+    "opensafely-rheumatoid-arthritis.csv": {
+      "id": "opensafely/rheumatoid-arthritis/2020-05-12",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/rheumatoid-arthritis/2020-05-12/",
+      "downloaded_at": "2022-01-26 14:39:38.420754Z",
+      "sha": "4042d1daebf9ab893093d0eeff6b62ad5927c86e"
+    }
+  }
 }
