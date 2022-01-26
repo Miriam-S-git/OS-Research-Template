@@ -341,3 +341,31 @@ common_variables = dict(
         ),
     ),       
 )
+
+
+##  I have pasted Robin's file  things I need to do:
+
+##  Find how to get all values of weight recorded so I can calculate BMI (find the actual codes used for most.recent.BMI)
+## Also need codes for BP, and other outcomes: lipid profile, HbA1c, referral to weight management programme, smoking status
+## create measures
+
+
+## Add other QOF conditions  
+# c) Heart Failure
+# d) Hypertension
+# e) Peripheral Arterial Disease
+# f) Stroke and TIA
+# g) Diabetes Mellitus
+# h ) A s t h m a
+# i) Chronic Obstructive Pulmonary Disease
+# j ) D e m e n t i a
+# k ) D e p r e s s i o n
+# l) Mental Health
+# m ) C a n c e r
+# n) Chronic Kidney Disease
+# o ) E p i l e p s y
+# p) Learning Disabilities
+# q) Osteoperosis
+# r) Rheumatoid Arthritis
+# s) Palliative Care
+# t) Non diabetic hyperglycaemia
