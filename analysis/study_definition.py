@@ -1,4 +1,13 @@
-from cohortextractor import StudyDefinition, patients, codelist, codelist_from_csv  # NOQA
+###  Study definition for BMI
+
+from cohortextractor import (
+    StudyDefinition,
+    codelist,
+    codelist_from_csv,
+    combine_codelists,
+    filter_codes_by_category,
+    patients,
+)
 
 
 study = StudyDefinition(
