@@ -48,7 +48,7 @@ opensafely/learning-disabilities/2020-07-06
 
 opensafely/rheumatoid-arthritis/2020-05-12
 
-
+opensafely/smoking-clear/2020-04-29
 
 
 
