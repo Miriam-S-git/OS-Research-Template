@@ -95,7 +95,19 @@ common_variables = dict(
         },
     ),    
                        
+    ######################
+    # BMI
+    ######################
+    
+    
+    
+    
+    
+    
+    #####################
     # Diabetes
+    ######################
+    
     type1_diabetes=patients.with_these_clinical_events(
         diabetes_t1_codes,
         on_or_before="index_date",
