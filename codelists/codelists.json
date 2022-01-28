@@ -113,6 +113,12 @@
       "url": "https://codelists.opensafely.org/codelist/opensafely/rheumatoid-arthritis/2020-05-12/",
       "downloaded_at": "2022-01-26 14:39:38.420754Z",
       "sha": "4042d1daebf9ab893093d0eeff6b62ad5927c86e"
+    },
+    "opensafely-smoking-clear.csv": {
+      "id": "opensafely/smoking-clear/2020-04-29",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/smoking-clear/2020-04-29/",
+      "downloaded_at": "2022-01-28 16:44:03.189098Z",
+      "sha": "0b5f3afe1db96dcce5141220e893a42ba2e5a8f7"
     }
   }
 }
