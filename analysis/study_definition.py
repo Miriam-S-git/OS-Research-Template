@@ -1,5 +1,13 @@
-from cohortextractor import StudyDefinition, patients, codelist, codelist_from_csv  # NOQA
+from cohortextractor import (
+    StudyDefinition, 
+    patients, 
+    codelist, 
+    codelist_from_csv,
+)  # NOQA
 
+from common_variables import (
+    common_variables
+)
 
 study = StudyDefinition(
     default_expectations={
@@ -8,6 +16,6 @@ study = StudyDefinition(
         "incidence": 0.5,
     },
     population=patients.registered_with_one_practice_between(
-        "2019-02-01", "2020-02-01"
+        "2019-03-01", "2020-03-01"
     ),
 )
