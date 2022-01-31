@@ -1,5 +1,11 @@
 {
   "files": {
+    "opensafely-ethnicity.csv": {
+      "id": "opensafely/ethnicity/2020-04-27",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/ethnicity/2020-04-27/",
+      "downloaded_at": "2022-01-31 12:25:00.087184Z",
+      "sha": "3d2f3998b71863a80b24d60f6f4282e14191ae13"
+    },
     "opensafely-atrial-fibrillation-clinical-finding.csv": {
       "id": "opensafely/atrial-fibrillation-clinical-finding/2020-07-09",
       "url": "https://codelists.opensafely.org/codelist/opensafely/atrial-fibrillation-clinical-finding/2020-07-09/",
@@ -83,6 +89,12 @@
       "url": "https://codelists.opensafely.org/codelist/opensafely/insulin-medication/2020-04-26/",
       "downloaded_at": "2022-01-31 11:11:51.977913Z",
       "sha": "9d4c57c0b8738962da04b32ab43b7659cd64d774"
+    },
+    "opensafely-diabetes-unknown-type.csv": {
+      "id": "opensafely/diabetes-unknown-type/2020-06-29",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/diabetes-unknown-type/2020-06-29/",
+      "downloaded_at": "2022-01-31 12:25:02.348501Z",
+      "sha": "eaaa1867e6bbcb436df91e8b75189d7ff1ca4b0c"
     },
     "opensafely-asthma-diagnosis.csv": {
       "id": "opensafely/asthma-diagnosis/2020-04-15",
