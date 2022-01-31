@@ -95,3 +95,13 @@ common_variables = dict(
         },
     ),    
 )
+
+# ignore diabetes type for now
+# For HbA1c level use codelist *opensafely/glycated-haemoglobin-hba1c-tests-numerical-value/5134e926  - this has included just IFCC measures. 
+
+
+## Diabetes diagnosis:  https://github.com/opensafely/ethnicity-covid-research/issues/11  to identify Type 1 or Type 2 based on codes
+# Type 1 diabetes:  opensafely/type-1-diabetes/2020-06-29
+# Type 2 diabetes: opensafely/type-2-diabetes/2020-06-29
+# Oral Antidiabetic drugs:  opensafely/antidiabetic-drugs/2020-07-16
+# Insulin: opensafely/insulin-medication/2020-04-26
