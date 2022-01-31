@@ -93,8 +93,10 @@ common_variables = dict(
                 }
             },
         },
-    ),    
+    ),         
 )
+    
+
 
 # ignore diabetes type for now
 # For HbA1c level use codelist *opensafely/glycated-haemoglobin-hba1c-tests-numerical-value/5134e926  - this has included just IFCC measures. 

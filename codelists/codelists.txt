@@ -1,4 +1,6 @@
 
+opensafely/ethnicity/2020-04-27
+
 opensafely/atrial-fibrillation-clinical-finding/2020-07-09
 
 opensafely/chronic-cardiac-disease/2020-04-08
@@ -28,7 +30,7 @@ opensafely/type-2-diabetes/2020-06-29
 opensafely/antidiabetic-drugs/2020-07-16  
 opensafely/insulin-medication/2020-04-26  
 
-
+opensafely/diabetes-unknown-type/2020-06-29
 
 opensafely/asthma-diagnosis/2020-04-15
 
