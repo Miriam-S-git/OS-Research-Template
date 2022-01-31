@@ -116,3 +116,11 @@ stroke_and_TIA_codes = combine_codelists(
     stroke_codes, 
     TIA_codes
 )
+
+# asthma
+
+asthma_codes = codelist_from_csv(
+    "codelists/opensafely-asthma-diagnosis.csv",
+    system="ctv3",
+    column=
+)
