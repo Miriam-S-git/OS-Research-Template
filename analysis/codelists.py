@@ -67,3 +67,99 @@ dementia_codes = codelist_from_csv(
     system="ctv3", 
     column="code"
 )
+
+# Atrial fibrillation
+
+AF_codes = codelist_from_csv(
+    "codelists/opensafely-atrial-fibrillation-clinical-finding.csv",
+    system="ctv3",
+    column="CTV3Code"
+)
+
+# Heart Disease excluding VSD and AF
+
+chronic_cardiac_codes = codelist_from_csv(
+    "codelists/opensafely-chronic-cardiac-disease.csv",
+    system= "ctv3",
+    column= "CTV3ID"
+)
+
+hypertension_codes = codelist_from_csv(
+    "codelists/opensafely-hypertension.csv", 
+    system="ctv3", 
+    column= "CTV3ID"
+
+)
+
+# peripheral arterial disease (PAD)
+periph_art_disease_codes = codelist_from_csv(
+    "codelists/opensafely-peripheral-arterial-disease.csv",
+    system="ctv3",
+    column="code"
+)
+
+# Combine stroke and TIA codes
+stroke_codes= codelist_from_csv(
+    "codelists/opensafely-stroke-updated.csv",
+    system="ctv3", 
+    column="CTV3ID"
+)
+
+TIA_codes= codelist_from_csv(
+    "codelists/opensafely-transient-ischaemic-attack.csv",
+    system="ctv3",
+    column="code"
+)
+
+
+stroke_and_TIA_codes = combine_codelists(
+    stroke_codes, 
+    TIA_codes
+)
+
+# asthma
+
+asthma_codes = codelist_from_csv(
+    "codelists/opensafely-asthma-diagnosis.csv",
+    system="ctv3",
+    column= "CTV3ID"
+)
+
+
+COPD_codes = codelist_from_csv(
+    "codelists/opensafely-current-copd.csv",
+    system="ctv3",
+    column="CTV3ID"
+)
+
+## Cancer
+other_cancer_codes = codelist_from_csv(
+    "codelists/opensafely-cancer-excluding-lung-and-haematological.csv",
+    system="ctv3",
+    column= "CTV3ID"
+)
+
+haem_cancer_codes = codelist_from_csv(
+    "codelists/opensafely-haematological-cancer.csv",
+    system= "ctv3",
+    column="CTV3ID"
+)
+
+
+lung_cancer_codes = codelist_from_csv(
+    "codelists/opensafely-lung-cancer.csv",
+    system="ctv3",
+    column="CTV3ID"
+)
+
+all_cancer_codes = combine_codelists(
+    other_cancer_codes,
+    haem_cancer_codes,
+    lung_cancer_codes
+)
+## Cancer - combine the following 3 lists
+#opensafely/cancer-excluding-lung-and-haematological/2020-04-15
+
+#opensafely/haematological-cancer/2020-04-15
+
+# opensafely/lung-cancer/2020-04-15
