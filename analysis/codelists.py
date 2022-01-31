@@ -83,3 +83,36 @@ chronic_cardiac_codes = codelist_from_csv(
     system= "ctv3",
     column= "CTV3ID"
 )
+
+hypertension_codes = codelist_from_csv(
+    "codelists/opensafely-hypertension.csv", 
+    system="ctv3", 
+    column= "CTV3ID"
+
+)
+
+# peripheral arterial disease (PAD)
+periph_art_disease_codes = codelist_from_csv(
+    "codelists/opensafely-peripheral-arterial-disease.csv",
+    system="ctv3",
+    column="code"
+)
+
+# Combine stroke and TIA codes
+stroke_codes= codelist_from_csv(
+    "codelists/opensafely-stroke-updated.csv",
+    system="ctv3", 
+    column="CTV3ID"
+)
+
+TIA_codes= codelist_from_csv(
+    "codelists/opensafely-transient-ischaemic-attack.csv",
+    system="ctv3",
+    column="code"
+)
+
+
+stroke_and_TIA_codes = combine_codelists(
+    stroke_codes, 
+    TIA_codes
+)
