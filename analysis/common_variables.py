@@ -96,7 +96,7 @@ common_variables = dict(
     ),   
     # Dementia
     dementia=patients.with_these_clinical_events(
-        dementia_codes,
+        dementia-complete_codes,
         on_or_before="index_date",
         returning="binary_flag",
         return_expectations={"incidence": 0.02, },
