@@ -67,3 +67,19 @@ dementia_codes = codelist_from_csv(
     system="ctv3", 
     column="code"
 )
+
+# Atrial fibrillation
+
+AF_codes = codelist_from_csv(
+    "codelists/opensafely-atrial-fibrillation-clinical-finding.csv",
+    system="ctv3",
+    column="CTV3Code"
+)
+
+# Heart Disease excluding VSD and AF
+
+chronic_cardiac_codes = codelist_from_csv(
+    "codelists/opensafely-chronic-cardiac-disease.csv",
+    system= "ctv3",
+    column= "CTV3ID"
+)
