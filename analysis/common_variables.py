@@ -93,8 +93,18 @@ common_variables = dict(
                 }
             },
         },
-    ),    
+    ),   
+    # Dementia
+        dementia=patients.with_these_clinical_events(
+            dementia_codes,
+            on_or_before="index_date",
+            returning="binary_flag",
+            return_expectations={"incidence": 0.02, },
+        ),
+    ),       
 )
+    
+
 
 # ignore diabetes type for now
 # For HbA1c level use codelist *opensafely/glycated-haemoglobin-hba1c-tests-numerical-value/5134e926  - this has included just IFCC measures. 
