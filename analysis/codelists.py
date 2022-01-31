@@ -124,3 +124,42 @@ asthma_codes = codelist_from_csv(
     system="ctv3",
     column= "CTV3ID"
 )
+
+
+COPD_codes = codelist_from_csv(
+    "codelists/opensafely-current-copd.csv",
+    system="ctv3",
+    column="CTV3ID"
+)
+
+## Cancer
+other_cancer_codes = codelist_from_csv(
+    "codelists/opensafely-cancer-excluding-lung-and-haematological.csv",
+    system="ctv3",
+    column= "CTV3ID"
+)
+
+haem_cancer_codes = codelist_from_csv(
+    "codelists/opensafely-haematological-cancer.csv",
+    system= "ctv3",
+    column="CTV3ID"
+)
+
+
+lung_cancer_codes = codelist_from_csv(
+    "codelists/opensafely-lung-cancer.csv",
+    system="ctv3",
+    column="CTV3ID"
+)
+
+all_cancer_codes = combine_codelists(
+    other_cancer_codes,
+    haem_cancer_codes,
+    lung_cancer_codes
+)
+## Cancer - combine the following 3 lists
+#opensafely/cancer-excluding-lung-and-haematological/2020-04-15
+
+#opensafely/haematological-cancer/2020-04-15
+
+# opensafely/lung-cancer/2020-04-15
