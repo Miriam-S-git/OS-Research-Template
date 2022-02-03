@@ -161,6 +161,12 @@
       "url": "https://codelists.opensafely.org/codelist/opensafely/smoking-clear/2020-04-29/",
       "downloaded_at": "2022-01-28 16:44:03.189098Z",
       "sha": "0b5f3afe1db96dcce5141220e893a42ba2e5a8f7"
+    },
+    "opensafely-systolic-blood-pressure-qof.csv": {
+      "id": "opensafely/systolic-blood-pressure-qof/3572b5fb",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/systolic-blood-pressure-qof/3572b5fb/",
+      "downloaded_at": "2022-02-03 16:52:55.835907Z",
+      "sha": "f2bc461e351499f4e5573a6f94e760b99979491e"
     }
   }
 }
