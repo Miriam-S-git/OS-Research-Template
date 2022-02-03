@@ -342,7 +342,7 @@ common_variables = dict(
                               },
     ),
 
-
+################################################################### NEW CODE TO BE REVIEWED BY ROBIN
 
 #######################################
 ### BMI
@@ -395,7 +395,7 @@ bmi=patients.most_recent_bmi(
 )
 
 
-
+###  ADD  OTHER QOF CONDITION VARIABLES
 
 
 
