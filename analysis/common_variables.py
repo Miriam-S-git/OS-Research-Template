@@ -342,8 +342,28 @@ common_variables = dict(
                               },
     ),
 
-)
+
+
+#######################################
+### BMI
+#######################################
+
+    # bmi
+bmi=patients.most_recent_bmi(
+    between=["index_date", "last_day_of_month(index_date)"],
+    minimum_age_at_measurement=18,
+    include_measurement_date=True,
+    date_format="YYYY-MM",
+    return_expectations={
+        "date": {"earliest": "2010-02-01", "latest": "2022-02-01"},
+        "float": {"distribution": "normal", "mean": 28, "stddev": 8},
+        "incidence": 0.01,
+    }
     
+    ),
+    
+)
+
 
 
 # ignore diabetes type for now
