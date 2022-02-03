@@ -370,15 +370,7 @@ bmi=patients.most_recent_bmi(
 ###################################################
 ### Systolic BP
 ################################################
-    systolic_blood_pressure_codes=patients.with_these_clinical_events(
-        hba1c_new_codes,
-        find_last_match_in_period=True,
-        between=["index_date", "last_day_of_month(index_date)"],
-        returning="binary_flag",
-        return_expectations={
-            "incidence": 0.1,
-        }
-    ),
+
 
 
 
