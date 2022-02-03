@@ -380,7 +380,7 @@ bmi=patients.most_recent_bmi(
         return_expectations={
             "incidence": 0.1,
             "float": {"distribution": "normal", "mean": 110, "stddev": 20},
-            "date": {"earliest": "index_date", "latest": "index_date + 1 year"},
+            "date": {"earliest": "index_date", "latest": "index_date + 1 month"},
             "rate": "uniform",
         },
     )
