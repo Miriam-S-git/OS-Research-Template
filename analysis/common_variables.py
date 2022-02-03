@@ -370,21 +370,22 @@ bmi=patients.most_recent_bmi(
 ###################################################
 ### Systolic BP
 ################################################
-# SBP
-
-    sbp=patients.mean_recorded_value(
-        systolic_blood_pressure_codes,
-        on_most_recent_day_of_measurement=True,
-        include_measurement_date=True,
+    systolic_blood_pressure_codes=patients.with_these_clinical_events(
+        hba1c_new_codes,
+        find_last_match_in_period=True,
         between=["index_date", "last_day_of_month(index_date)"],
-        date_format="YYYY-MM-DD",
+        returning="binary_flag",
         return_expectations={
             "incidence": 0.1,
-            "float": {"distribution": "normal", "mean": 110, "stddev": 20},
-            "date": {"earliest": "index_date", "latest": "index_date + 1 year"},
-            "rate": "uniform",
-        },
+        }
     ),
+
+
+
+
+# SBP
+
+
     
 )
 

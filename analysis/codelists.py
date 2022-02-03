@@ -163,3 +163,9 @@ all_cancer_codes = combine_codelists(
 #opensafely/haematological-cancer/2020-04-15
 
 # opensafely/lung-cancer/2020-04-15
+
+systolic_blood_pressure_codes = codelist_from_csv (
+    "codelists/opensafely-systolic-blood-pressure-qof.csv", 
+    system="SNOMED",
+    column="term"
+)
