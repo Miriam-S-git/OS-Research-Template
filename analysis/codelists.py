@@ -167,5 +167,5 @@ all_cancer_codes = combine_codelists(
 systolic_blood_pressure_codes = codelist_from_csv (
     "codelists/opensafely-systolic-blood-pressure-qof.csv", 
     system="SNOMED",
-    column="term"
+    column='code'
 )
