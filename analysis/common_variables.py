@@ -342,8 +342,63 @@ common_variables = dict(
                               },
     ),
 
-)
+################################################################### NEW CODE TO BE REVIEWED BY ROBIN
+
+#######################################
+### BMI
+    ## STILL NEED TO CREATE A FLAG THAT THE PATIENT HAD A BMI TEST ##
+#######################################
+
+    # bmi
+bmi=patients.most_recent_bmi(
+    between=["index_date", "last_day_of_month(index_date)"],
+    minimum_age_at_measurement=18,
+    include_measurement_date=True,
+    date_format="YYYY-MM",
+    return_expectations={
+        "date": {"earliest": "2010-02-01", "latest": "2022-02-01"},
+        "float": {"distribution": "normal", "mean": 28, "stddev": 8},
+        "incidence": 0.01,
+    }
     
+    ),
+    
+
+
+
+
+###################################################
+### Systolic BP
+################################################
+
+    sbp=patients.mean_recorded_value(
+        systolic_blood_pressure_codes,
+        on_most_recent_day_of_measurement=True,
+        include_measurement_date=True,
+        between=["index_date", "last_day_of_month(index_date)"],
+        date_format="YYYY-MM",
+        return_expectations={
+            "incidence": 0.1,
+            "float": {"distribution": "normal", "mean": 110, "stddev": 20},
+            "date": {"earliest": "index_date", "latest": "index_date + 1 month"},
+            "rate": "uniform",
+        },
+    )
+
+
+
+
+# SBP
+
+
+    
+)
+
+
+###  ADD  OTHER QOF CONDITION VARIABLES
+
+
+
 
 
 # ignore diabetes type for now
