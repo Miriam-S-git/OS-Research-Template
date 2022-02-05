@@ -19,5 +19,7 @@ study = StudyDefinition(
     population=patients.registered_with_one_practice_between(
         "2019-03-01", "2020-03-01"
     ),
+    
+    ** common_variables
 )
 from codelists import *
