@@ -20,13 +20,13 @@ study = StudyDefinition(
     ############################### Robin's code
     population=patients.satisfying(
         """
-        registered AND
+        registered_one_year AND
         (sex = "M" OR sex = "F") AND
         (age >= 18 AND age <= 110) AND
         (region != "")
         """,
         
-        registered=patients.registered_as_of(
+        registered_one_year=patients.registered_as_of(
             "index_date",
             return_expectations={"incidence": 0.9},
 
