@@ -3,7 +3,7 @@ from codelists import *
 
 common_variables = dict(
     # Index date for comparison
-    index_date = "2019-03-01",
+    index_date = "2020-03-01",
     
     # Sex
     sex = patients.sex(return_expectations={
