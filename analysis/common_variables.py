@@ -403,8 +403,8 @@ bmi=patients.most_recent_bmi(
 ###################################
     
         
-        copd=patients.with_these_clinical_events(
-            copd_codes,
+        COPD=patients.with_these_clinical_events(
+            COPD_codes,
             on_or_before="index_date",
             returning="binary_flag",
             return_expectations={"incidence": 0.05, },
