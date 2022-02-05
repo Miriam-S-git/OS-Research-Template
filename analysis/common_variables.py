@@ -1,6 +1,10 @@
 from cohortextractor import patients
 from codelists import *
 
+##############  NEED TO ADD MENTAL HEALTH CODES>>> removed as run error on actions.  Need to check code.
+
+
+
 common_variables = dict(
     
     # Sex
@@ -100,40 +104,6 @@ common_variables = dict(
         returning="binary_flag",
         return_expectations={"incidence": 0.01, },
     ),    
-    
-    # Mental illness
-    mental_illness=patients.categorised_as(
-        {"None": "DEFAULT", 
-         "Severe Mental Illness": """(psychosis_schiz_bipolar OR dementia) AND NOT 
-                                     (depression)""",
-         "Depression": """depression AND NOT 
-                          (psychosis_schiz_bipolar OR dementia)"""
-        },
-        return_expectations = {"rate": "universal",
-                              "category": {
-                                  "ratios": {
-                                      "None": 0.93,
-                                      "Severe Mental Illness": 0.02,
-                                      "Depression": 0.05,
-                                      }
-                                  }
-                              },
-        ),
-        
-    # Depression
-        depression=patients.with_these_clinical_events(
-            depression_codes,
-            on_or_before="index_date",
-            returning="binary_flag",
-            return_expectations={"incidence": 0.01, },
-        ),
-        # Psychosis
-        psychosis_schiz_bipolar=patients.with_these_clinical_events(
-            psychosis_schizophrenia_bipolar_affective_disease_codes,
-            on_or_before="index_date",
-            returning="binary_flag",
-            return_expectations={"incidence": 0.01, },
-        ),
         
         # Dementia
         dementia=patients.with_these_clinical_events(
