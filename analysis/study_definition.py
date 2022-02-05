@@ -16,8 +16,33 @@ study = StudyDefinition(
         "rate": "uniform",
         "incidence": 0.5,
     },
-    population=patients.registered_with_one_practice_between(
+    
+    ############################### Robin's code
+    population=patients.satisfying(
+        """
+        registered_one_year AND
+        (sex = "M" OR sex = "F") AND
+        (age >= 23 AND age <= 110) AND
+        (region != "")
+        """,
+        
+        registered_one_year=patients.registered_as_of(
+            "index_date",
+            return_expectations={"incidence": 0.9},
+
+        )
+    ),
+    
+    
+    
+    
+   ##################################### 
+   ##################################### MY old code - changed to just define a variable
+    registered=patients.registered_with_one_practice_between(
         "2019-03-01", "2020-03-01"
     ),
+    
+    ##############################################
+    ** common_variables
 )
 from codelists import *
