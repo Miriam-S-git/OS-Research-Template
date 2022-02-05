@@ -383,19 +383,84 @@ bmi=patients.most_recent_bmi(
             "date": {"earliest": "index_date", "latest": "index_date + 1 month"},
             "rate": "uniform",
         },
-    )
+    ),
+##################################
+###  ADD  OTHER QOF CONDITION VARIABLES
+#####################################
 
+ ##### Asthma
+###############################
 
+        asthma=patients.with_these_clinical_events(
+            asthma_codes,
+            on_or_before="index_date",
+            returning="binary_flag",
+            return_expectations={"incidence": 0.1, },
+    ),
+    
+    
+######  COPD
+###################################
+    
+        
+        copd=patients.with_these_clinical_events(
+            copd_codes,
+            on_or_before="index_date",
+            returning="binary_flag",
+            return_expectations={"incidence": 0.05, },
+     ),
+ 
+##### Stroke and TIA
+####################################
+    
+        stroke_and_TIA=patients.with_these_clinical_events(
+            stroke_and_TIA_codes,
+            on_or_before="index_date",
+            returning="binary_flag",
+            return_expectations={"incidence": 0.02, },
+     ),
 
+ 
+ #### Chronic Cardiac Disease (excluding AF and VSD)
+   
+        chronic_cardiac=patients.with_these_clinical_events(
+            chronic_cardiac_codes,
+            on_or_before="index_date",
+            returning="binary_flag",
+            return_expectations={"incidence": 0.10, },
+        ),
+    
+ ####  Hypertension codes
 
-# SBP
+        hypertension=patients.with_these_clinical_events(
+            hypertension_codes,
+            on_or_before="index_date",
+            returning="binary_flag",
+            return_expectations={"incidence": 0.20, },
+        ),
+    
+
+    # Chronic kidney disease
+    # Chronic liver disease
+    # Housebound
+
+    
+######  Cancer Codes
+    
+    
+        all_cancer=patients.with_these_clinical_events(
+            all_cancer_codes,
+            on_or_before="index_date",
+            returning="binary_flag",
+            return_expectations={"incidence": 0.05, },
+        ),
 
 
     
 )
 
 
-###  ADD  OTHER QOF CONDITION VARIABLES
+
 
 
 
