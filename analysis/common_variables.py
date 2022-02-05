@@ -113,6 +113,14 @@ common_variables = dict(
             return_expectations={"incidence": 0.02, },
         ),
     
+        # Depression
+        depression=patients.with_these_clinical_events(
+            depression_codes,
+            on_or_before="index_date",
+            returning="binary_flag",
+            return_expectations={"incidence": 0.01, },
+        ),
+    
     # Diabetes
     type1_diabetes=patients.with_these_clinical_events(
         diabetes_t1_codes,
