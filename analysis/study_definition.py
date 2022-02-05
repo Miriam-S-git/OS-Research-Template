@@ -22,7 +22,7 @@ study = StudyDefinition(
         """
         registered_one_year AND
         (sex = "M" OR sex = "F") AND
-        (age >= 18 AND age <= 110) AND
+        (age >= 23 AND age <= 110) AND
         (region != "")
         """,
         
