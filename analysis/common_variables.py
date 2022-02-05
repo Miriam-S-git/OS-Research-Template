@@ -118,6 +118,14 @@ common_variables = dict(
             depression_codes,
             on_or_before="index_date",
             returning="binary_flag",
+            return_expectations={"incidence": 0.1, },
+        ),
+    
+            # Psychosis
+        psychosis_schiz_bipolar=patients.with_these_clinical_events(
+            psychosis_schizophrenia_bipolar_affective_disease_codes,
+            on_or_before="index_date",
+            returning="binary_flag",
             return_expectations={"incidence": 0.01, },
         ),
     
