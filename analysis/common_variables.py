@@ -1,6 +1,10 @@
 from cohortextractor import patients
 from codelists import *
 
+##############  NEED TO ADD MENTAL HEALTH CODES>>> removed as run error on actions.  Need to check code.
+
+
+
 common_variables = dict(
     
     # Sex
