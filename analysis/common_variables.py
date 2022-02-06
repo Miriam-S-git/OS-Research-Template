@@ -350,22 +350,24 @@ bmi=patients.most_recent_bmi(
 ### categorising BMI
 ############### CHECK BMI CATEGORY CODES AND RETURN EXPECTATIONS WITH ROBIN
     
-    bmi_groups = patients.categorised_as(
+    bmi_base_groups = patients.categorised_as(
         {
-            "underweight": "bmi < 18.5", 
-            "healthy_weight": "bmi >= 18.5 AND bmi < 25", 
-            "overweight": "bmi >= 25 AND bmi < 30",
-            "obese": "bmi >=30", 
+            "1": "bmi < 18.5", 
+            "2": "bmi >= 18.5 AND bmi < 25", 
+            "3": "bmi >= 25 AND bmi < 27.5",
+            "4": "bmi >= 27.5 AND bmi < 30",
+            "5": "bmi >=30", 
             "missing": "DEFAULT", 
         }, 
         return_expectations = {
             "rate": "universal", 
             "category": {
                 "ratios": {
-                    "underweight": 0.05,
-                    "healthy_weight": 0.25,
-                    "overweight": 0.4,
-                    "obese": 0.3,
+                    "1": 0.05,
+                    "2": 0.25,
+                    "3": 0.2,
+                    "4": 0.2,
+                    "5": 0.3,
                 }
             },
         },
@@ -373,22 +375,7 @@ bmi=patients.most_recent_bmi(
     ),
 
 
-    bmi_eth_obese = patients.categorised_as(
-        {
-            "bmi_under27.5": "bmi < 27.5", 
-            "bmi_over27.5": "bmi >= 27.5", 
-            "missing": "DEFAULT", 
-        }, 
-        return_expectation = {
-            "rate": "universal",
-            "category": {
-                "ratios": {
-                    "bmi_under27.5": 0.35, 
-                    "bmi_over27.5": 0.65, 
-                }
-            },
-        }, 
-    ),
+
             
                    
            
