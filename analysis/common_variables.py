@@ -373,7 +373,7 @@ bmi=patients.most_recent_bmi(
     ),
 
 
-    bmi_27.5 = patients.categorised_as(
+    bmi_eth_obese = patients.categorised_as(
         {
             "bmi_under27.5": "bmi < 27.5", 
             "bmi_over27.5": "bmi >= 27.5", 
