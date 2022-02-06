@@ -373,29 +373,31 @@ bmi=patients.most_recent_bmi(
         },
         
     ),
+
     
+####################  CODE TO GROUP PATIENTS DOES NOT WORK.   Need to review. 
     
-    bmi_groups = patients.categorised_as(
-        {
-            "underweight": "bmi_base_groups = 1", 
-            "healthy_weight": "bmi_base_groups = 2", 
-            "overweight": "bmi_base_groups = 2 OR bmi_base_groups = 3",
-            "obese": "bmi_base_groups = 5",
-            "missing": "DEFAULT", 
-        }, 
-      return_expectations = {
-            "rate": "universal", 
-            "category": {
-                "ratios": {
-                    "underweight": 0.05, 
-                    "healthy_weight": 0.25, 
-                    "overweight": 0.4,
-                    "obese": 0.3,
-                    "missing": "DEFAULT", 
-                }
-            },
-        },     
-    ),
+   # bmi_groups = patients.categorised_as(
+       # {
+       #     "underweight": "bmi_base_groups = 1", 
+       #     "healthy_weight": "bmi_base_groups = 2", 
+       #     "overweight": "bmi_base_groups = 2 OR bmi_base_groups = 3",
+       #     "obese": "bmi_base_groups = 5",
+       #     "missing": "DEFAULT", 
+  #      }, 
+  #    return_expectations = {
+  #          "rate": "universal", 
+  #          "category": {
+  #             "ratios": {
+   #                 "underweight": 0.05, 
+    #                "healthy_weight": 0.25, 
+     #               "overweight": 0.4,
+      #              "obese": 0.3,
+       #             "missing": "DEFAULT", 
+        #        }
+  #          },
+   #     },     
+  #  ),
 
 ###  Do i need to add return expectations again for a derived variable if first variable already has return_expections
 
