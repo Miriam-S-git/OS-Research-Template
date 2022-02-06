@@ -362,9 +362,9 @@ bmi=patients.most_recent_bmi(
             "rate": "universal", 
             "category": {
                 "ratios": {
-                    "underweight": 0.05
-                    "healthy_weight": 0.25
-                    "overweight": 0.4
+                    "underweight": 0.05,
+                    "healthy_weight": 0.25,
+                    "overweight": 0.4,
                     "obese": 0.3,
                 }
             },
