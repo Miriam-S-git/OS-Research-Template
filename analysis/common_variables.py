@@ -373,6 +373,26 @@ bmi=patients.most_recent_bmi(
     ),
 
 
+    bmi_27.5 = patients.categorised_as(
+        {
+            "bmi_under27.5": "bmi < 27.5", 
+            "bmi_over27.5": "bmi >= 27.5", 
+            "missing": "DEFAULT", 
+        }, 
+        return_expectation = {
+            "rate": "universal"
+            "category": {
+                "ratios": {
+                    "bmi_under27.5": 0.35, 
+                    "bmi_over27.5": 0.65, 
+                }
+            },
+        }, 
+    ),
+            
+                   
+           
+        
 
 ###################################################
 ### Systolic BP
