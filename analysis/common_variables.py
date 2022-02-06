@@ -380,7 +380,7 @@ bmi=patients.most_recent_bmi(
             "missing": "DEFAULT", 
         }, 
         return_expectation = {
-            "rate": "universal"
+            "rate": "universal",
             "category": {
                 "ratios": {
                     "bmi_under27.5": 0.35, 
