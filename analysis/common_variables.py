@@ -390,8 +390,6 @@ bmi=patients.most_recent_bmi(
                     "healthy_weight": 0.25, 
                     "overweight": 0.4,
                     "obese": 0.3, 
-                    "missing": "DEFAULT", 
-
                 }
             },
         },
