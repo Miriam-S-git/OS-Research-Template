@@ -350,7 +350,7 @@ bmi=patients.most_recent_bmi(
 ### categorising BMI
 ############### CHECK BMI CATEGORY CODES AND RETURN EXPECTATIONS WITH ROBIN
     
-    bmi_groups = patients.caetgorised_as(
+    bmi_groups = patients.categorised_as(
         {
             "underweight": "bmi < 18.5", 
             "healthy_weight": "bmi >= 18.5 AND bmi < 25", 
