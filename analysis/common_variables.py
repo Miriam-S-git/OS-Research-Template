@@ -373,8 +373,19 @@ bmi=patients.most_recent_bmi(
         },
         
     ),
+    
+    
+    bmi_groups = patients.categorised_as(
+        {
+            "underweight": "bmi_base_groups = 1", 
+            "healthy_weight": "bmi_base_groups = 2", 
+            "overweight": "bmi_base_groups = 2 OR bmi_base_groups = 3",
+            "obese": "bmi_base_groups = 5",
+            "missing": "DEFAULT", 
+        }, 
+    ),
 
-
+###  Do i need to add return expectations again for a derived variable if first variable already has return_expections
 
             
                    
