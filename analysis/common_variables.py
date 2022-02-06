@@ -350,7 +350,31 @@ bmi=patients.most_recent_bmi(
 ### categorising BMI
 ############### CHECK BMI CATEGORY CODES AND RETURN EXPECTATIONS WITH ROBIN
     
-    bmi_groups = patients.categorised_as(
+    bmi_base_groups = patients.categorised_as(
+        {
+            "1": "bmi < 18.5", 
+            "2": "bmi >= 18.5 AND bmi < 25", 
+            "3": "bmi >= 25 AND bmi < 27.5",
+            "4": "bmi >= 27.5 AND bmi < 30",
+            "5": "bmi >=30", 
+            "missing": "DEFAULT", 
+        }, 
+        return_expectations = {
+            "rate": "universal", 
+            "category": {
+                "ratios": {
+                    "1": 0.05,
+                    "2": 0.25,
+                    "3": 0.2,
+                    "4": 0.2,
+                    "5": 0.3,
+                }
+            },
+        },     
+    ),
+
+    
+ bmi_groups = patients.categorised_as(
         {
             "underweight": "bmi < 18.5", 
             "healthy_weight": "bmi >= 18.5 AND bmi < 25", 
@@ -362,17 +386,49 @@ bmi=patients.most_recent_bmi(
             "rate": "universal", 
             "category": {
                 "ratios": {
-                    "underweight": 0.05,
-                    "healthy_weight": 0.25,
+                    "underweight": 0.05, 
+                    "healthy_weight": 0.25, 
                     "overweight": 0.4,
-                    "obese": 0.3,
+                    "obese": 0.3, 
                 }
             },
         },
         
-    ),
+    ),   
+    
+    
+    
+    
+####################  CODE TO GROUP PATIENTS DOES NOT WORK.   Need to review. 
+    
+   # bmi_groups = patients.categorised_as(
+       # {
+       #     "underweight": "bmi_base_groups = 1", 
+       #     "healthy_weight": "bmi_base_groups = 2", 
+       #     "overweight": "bmi_base_groups = 2 OR bmi_base_groups = 3",
+       #     "obese": "bmi_base_groups = 5",
+       #     "missing": "DEFAULT", 
+  #      }, 
+  #    return_expectations = {
+  #          "rate": "universal", 
+  #          "category": {
+  #             "ratios": {
+   #                 "underweight": 0.05, 
+    #                "healthy_weight": 0.25, 
+     #               "overweight": 0.4,
+      #              "obese": 0.3,
+       #             "missing": "DEFAULT", 
+        #        }
+  #          },
+   #     },     
+  #  ),
 
+###  Do i need to add return expectations again for a derived variable if first variable already has return_expections
 
+            
+                   
+           
+        
 
 ###################################################
 ### Systolic BP
