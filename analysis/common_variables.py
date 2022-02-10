@@ -335,7 +335,7 @@ common_variables = dict(
 
     # bmi
 bmi=patients.most_recent_bmi(
-    between=["index_date", "last_day_of_month(index_date)"],
+    between=["index_date", "index_date + 1 year"],
     minimum_age_at_measurement=18,
     include_measurement_date=True,
     date_format="YYYY-MM",
@@ -438,7 +438,7 @@ bmi=patients.most_recent_bmi(
         systolic_blood_pressure_codes,
         on_most_recent_day_of_measurement=True,
         include_measurement_date=True,
-        between=["index_date", "last_day_of_month(index_date)"],
+        between=["index_date", "index_date + 1 year"],
         date_format="YYYY-MM",
         return_expectations={
             "incidence": 0.1,
