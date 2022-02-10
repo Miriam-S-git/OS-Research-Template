@@ -347,9 +347,7 @@ bmi=patients.most_recent_bmi(
     
     ),
     
-    
-####  This will only give one value.  not the average BMI over the year. 
-    ##  Options - create monthly BMI variables.  ' "between index_date + 1 month"   and "index_date + 2 months"..... window for each month in question
+
     
     
 had_bmi = patients.satisfying(
@@ -358,9 +356,35 @@ had_bmi = patients.satisfying(
     """
     ), 
     
-    
-    
 
+#################  CHECK FOR MONTHLY BMI
+####  This will only give one value.  not the average BMI over the year. 
+    ##  Options - create monthly BMI variables.  ' "between index_date + 1 month"   and "index_date + 2 months"..... window for each month in question
+
+    # bmi
+bmi_march=patients.most_recent_bmi(
+    between=["index_date", "index_date + 1 month"],
+    minimum_age_at_measurement=18,
+    include_measurement_date=True,
+    date_format="YYYY-MM",
+    return_expectations={
+        "date": {"earliest": "2010-02-01", "latest": "2022-02-01"},
+        "float": {"distribution": "normal", "mean": 28, "stddev": 8},
+        "incidence": 0.1,
+    }
+    
+    ),
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 ### categorising BMI
 ############### CHECK BMI CATEGORY CODES AND RETURN EXPECTATIONS WITH ROBIN
@@ -414,35 +438,7 @@ had_bmi = patients.satisfying(
     
     
     
-####################  CODE TO GROUP PATIENTS DOES NOT WORK.   Need to review. 
-    
-   # bmi_groups = patients.categorised_as(
-       # {
-       #     "underweight": "bmi_base_groups = 1", 
-       #     "healthy_weight": "bmi_base_groups = 2", 
-       #     "overweight": "bmi_base_groups = 2 OR bmi_base_groups = 3",
-       #     "obese": "bmi_base_groups = 5",
-       #     "missing": "DEFAULT", 
-  #      }, 
-  #    return_expectations = {
-  #          "rate": "universal", 
-  #          "category": {
-  #             "ratios": {
-   #                 "underweight": 0.05, 
-    #                "healthy_weight": 0.25, 
-     #               "overweight": 0.4,
-      #              "obese": 0.3,
-       #             "missing": "DEFAULT", 
-        #        }
-  #          },
-   #     },     
-  #  ),
 
-###  Do i need to add return expectations again for a derived variable if first variable already has return_expections
-
-            
-                   
-           
         
 
 ###################################################
