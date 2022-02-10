@@ -342,10 +342,25 @@ bmi=patients.most_recent_bmi(
     return_expectations={
         "date": {"earliest": "2010-02-01", "latest": "2022-02-01"},
         "float": {"distribution": "normal", "mean": 28, "stddev": 8},
-        "incidence": 0.01,
+        "incidence": 0.20,
     }
     
     ),
+    
+    
+####  This will only give one value.  not the average BMI over the year. 
+    ##  Options - create monthly BMI variables.  ' "between index_date + 1 month"   and "index_date + 2 months"..... window for each month in question
+    
+    
+had_bmi = patients.satisfying(
+    """
+    bmi>0
+    """
+    ), 
+    
+    
+    
+
     
 ### categorising BMI
 ############### CHECK BMI CATEGORY CODES AND RETURN EXPECTATIONS WITH ROBIN
