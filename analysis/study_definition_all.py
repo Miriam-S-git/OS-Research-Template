@@ -3,6 +3,7 @@ from cohortextractor import (
     patients, 
     codelist, 
     codelist_from_csv,
+    Measure,
 )  # NOQA
 
 from common_variables import (
@@ -26,23 +27,14 @@ study = StudyDefinition(
         (region != "")
         """,
         
-        registered_one_year=patients.registered_as_of(
-            "index_date",
-            return_expectations={"incidence": 0.9},
+        registered_one_year=patients.registered_with_one_practice_between(
+        "2019-03-01", "2020-03-01",
+        return_expectations={"incidence": 0.9},
 
         )
-    ),
-    
-    
-    
-    
-   ##################################### 
-   ##################################### MY old code - changed to just define a variable
-    registered=patients.registered_with_one_practice_between(
-        "2019-03-01", "2020-03-01"
-    ),
-    
-    ##############################################
+    ),    
+        
+        
     ** common_variables
 )
 from codelists import *

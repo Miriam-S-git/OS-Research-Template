@@ -335,21 +335,115 @@ common_variables = dict(
 
     # bmi
 bmi=patients.most_recent_bmi(
-    between=["index_date", "last_day_of_month(index_date)"],
+    between=["index_date", "index_date + 1 year"],
     minimum_age_at_measurement=18,
     include_measurement_date=True,
     date_format="YYYY-MM",
     return_expectations={
         "date": {"earliest": "2010-02-01", "latest": "2022-02-01"},
         "float": {"distribution": "normal", "mean": 28, "stddev": 8},
-        "incidence": 0.01,
+        "incidence": 0.20,
     }
     
     ),
     
+    
+####  This will only give one value.  not the average BMI over the year. 
+    ##  Options - create monthly BMI variables.  ' "between index_date + 1 month"   and "index_date + 2 months"..... window for each month in question
+    
+    
+had_bmi = patients.satisfying(
+    """
+    bmi>0
+    """
+    ), 
+    
+    
+    
 
+    
+### categorising BMI
+############### CHECK BMI CATEGORY CODES AND RETURN EXPECTATIONS WITH ROBIN
+    
+    bmi_base_groups = patients.categorised_as(
+        {
+            "1": "bmi < 18.5", 
+            "2": "bmi >= 18.5 AND bmi < 25", 
+            "3": "bmi >= 25 AND bmi < 27.5",
+            "4": "bmi >= 27.5 AND bmi < 30",
+            "5": "bmi >=30", 
+            "missing": "DEFAULT", 
+        }, 
+        return_expectations = {
+            "rate": "universal", 
+            "category": {
+                "ratios": {
+                    "1": 0.05,
+                    "2": 0.25,
+                    "3": 0.2,
+                    "4": 0.2,
+                    "5": 0.3,
+                }
+            },
+        },     
+    ),
 
+    
+ bmi_groups = patients.categorised_as(
+        {
+            "underweight": "bmi < 18.5", 
+            "healthy_weight": "bmi >= 18.5 AND bmi < 25", 
+            "overweight": "bmi >= 25 AND bmi < 30",
+            "obese": "bmi >=30", 
+            "missing": "DEFAULT", 
+        }, 
+        return_expectations = {
+            "rate": "universal", 
+            "category": {
+                "ratios": {
+                    "underweight": 0.05, 
+                    "healthy_weight": 0.25, 
+                    "overweight": 0.4,
+                    "obese": 0.3, 
+                }
+            },
+        },
+        
+    ),   
+    
+    
+    
+    
+####################  CODE TO GROUP PATIENTS DOES NOT WORK.   Need to review. 
+    
+   # bmi_groups = patients.categorised_as(
+       # {
+       #     "underweight": "bmi_base_groups = 1", 
+       #     "healthy_weight": "bmi_base_groups = 2", 
+       #     "overweight": "bmi_base_groups = 2 OR bmi_base_groups = 3",
+       #     "obese": "bmi_base_groups = 5",
+       #     "missing": "DEFAULT", 
+  #      }, 
+  #    return_expectations = {
+  #          "rate": "universal", 
+  #          "category": {
+  #             "ratios": {
+   #                 "underweight": 0.05, 
+    #                "healthy_weight": 0.25, 
+     #               "overweight": 0.4,
+      #              "obese": 0.3,
+       #             "missing": "DEFAULT", 
+        #        }
+  #          },
+   #     },     
+  #  ),
 
+###  Do i need to add return expectations again for a derived variable if first variable already has return_expections
+
+            
+                   
+           
+        
 
 ###################################################
 ### Systolic BP
@@ -359,7 +453,7 @@ bmi=patients.most_recent_bmi(
         systolic_blood_pressure_codes,
         on_most_recent_day_of_measurement=True,
         include_measurement_date=True,
-        between=["index_date", "last_day_of_month(index_date)"],
+        between=["index_date", "index_date + 1 year"],
         date_format="YYYY-MM",
         return_expectations={
             "incidence": 0.1,
