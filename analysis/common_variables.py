@@ -376,7 +376,18 @@ bmi_march=patients.most_recent_bmi(
     ),
     
     
+ bmi_apr=patients.most_recent_bmi(
+    between=["index_date + 1 month", "index_date + 2 months"],
+    minimum_age_at_measurement=18,
+    include_measurement_date=True,
+    date_format="YYYY-MM",
+    return_expectations={
+        "date": {"earliest": "2010-02-01", "latest": "2022-02-01"},
+        "float": {"distribution": "normal", "mean": 28, "stddev": 8},
+        "incidence": 0.1,
+    }
     
+    ),   
     
     
     
