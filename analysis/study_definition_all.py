@@ -3,7 +3,7 @@ from cohortextractor import (
     patients, 
     codelist, 
     codelist_from_csv,
-    Measure
+    Measure,
 )  # NOQA
 
 from common_variables import (
