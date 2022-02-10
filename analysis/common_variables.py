@@ -326,11 +326,10 @@ common_variables = dict(
                               },
     ),
 
-################################################################### NEW CODE TO BE REVIEWED BY ROBIN
+
 
 #######################################
 ### BMI
-    ## STILL NEED TO CREATE A FLAG THAT THE PATIENT HAD A BMI TEST ##
 #######################################
 
     # bmi
@@ -348,14 +347,16 @@ bmi=patients.most_recent_bmi(
     ),
     
 
-    
+###  Flag whether there is a BMI in the last year   
     
 had_bmi = patients.satisfying(
     """
     bmi>0
     """
     ), 
-    
+
+
+
 
 #################  CHECK FOR MONTHLY BMI
 ####  This will only give one value.  not the average BMI over the year. 
@@ -533,7 +534,7 @@ bmi_march=patients.most_recent_bmi(
     
     
 ### categorising BMI
-############### CHECK BMI CATEGORY CODES AND RETURN EXPECTATIONS WITH ROBIN
+############### BUT THIS IS BASED ON MOST RECENT BMI - should we do based on average BMI from monthly readings. 
     
     bmi_base_groups = patients.categorised_as(
         {
