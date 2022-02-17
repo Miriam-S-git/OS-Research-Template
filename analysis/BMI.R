@@ -919,7 +919,7 @@ BMI_complete_categories$BMI_over27.5 <- cut(BMI_complete_categories$mean_bmi,
 
 ##  generate a variable to state if eligible for the DWMP 
 
-
+write.csv (BMI_complete_categories, file=here::here("output","tables","BMI_complete_categories.csv")
 
 
 ############################################################
